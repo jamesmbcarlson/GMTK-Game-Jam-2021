@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Sprites")]
+    public Sprite spriteFacingLeft;
+    public Sprite spriteFacingRight;
+
     private int moveSpeed = 5;
     private SpriteRenderer sprite;
 
@@ -24,16 +28,16 @@ public class PlayerMovement : MonoBehaviour
 
         // update position
         var deltaX = transform.position.x + Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        transform.position = new Vector2(deltaX, 0f);
+        transform.position = new Vector2(deltaX, transform.position.y); // JAMES, change this y value
 
         // update sprites
-        if(Input.GetAxis("Horizontal") < 0)
+        if (Input.GetAxis("Horizontal") < 0)
         {
-            sprite.flipX = true;
+            sprite.sprite = spriteFacingLeft;
         }
         else if (Input.GetAxis("Horizontal") > 0)
         {
-            sprite.flipX = false;
+            sprite.sprite = spriteFacingRight;
         }
     }
 }
