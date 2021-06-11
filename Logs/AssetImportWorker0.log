@@ -120,3 +120,67 @@ Received Import Request.
 Start importing Assets/_RobbieScritpsNotToRelease/PlayerInput.cs using Guid(13ddc88dcd96b426aaf3a1f25ca1be00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9e1de3be549cb7fc03c7078fa57650f') in 0.001616 seconds
   Import took 0.004765 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 1615.559519 seconds.
+  path: Assets/Art/Pallete_Asesprite.png
+  artifactKey: Guid(5eb3a75e88f414f298fea36f17ff5009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Pallete_Asesprite.png using Guid(5eb3a75e88f414f298fea36f17ff5009) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de7b7fae851a68fd657401629ae07221') in 0.608325 seconds
+  Import took 0.616620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 588.600660 seconds.
+  path: Assets/Art
+  artifactKey: Guid(79c4fc020ea6d4aee8d1dc68b16b1712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art using Guid(79c4fc020ea6d4aee8d1dc68b16b1712) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2865e2a8673507c1856fc0d9ac1dc1e') in 0.001920 seconds
+  Import took 0.006435 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.047845 seconds.
+  path: Assets/Art/GroundTiles.png
+  artifactKey: Guid(718e9580ceabe4926a4707755bbcf446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/GroundTiles.png using Guid(718e9580ceabe4926a4707755bbcf446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '657e78f1d659dbf1f8f07cc8bdea5543') in 0.014148 seconds
+  Import took 0.017011 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.077350 seconds.
+  path: Assets/Art/GroundTiles.png
+  artifactKey: Guid(718e9580ceabe4926a4707755bbcf446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/GroundTiles.png using Guid(718e9580ceabe4926a4707755bbcf446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38e225352829711d345d48942d8b9003') in 0.007134 seconds
+  Import took 0.009978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003668 seconds.
+  path: Assets/Art/GroundTiles.png
+  artifactKey: Guid(718e9580ceabe4926a4707755bbcf446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/GroundTiles.png using Guid(718e9580ceabe4926a4707755bbcf446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38e225352829711d345d48942d8b9003') in 0.004715 seconds
+  Import took 0.007423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.972629 seconds.
+  path: Assets/Art/GroundTiles.png
+  artifactKey: Guid(718e9580ceabe4926a4707755bbcf446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/GroundTiles.png using Guid(718e9580ceabe4926a4707755bbcf446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '141e773695108d3ef3c960ade1eb2287') in 0.018124 seconds
+  Import took 0.020878 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005938 seconds.
+  path: Assets/Art/GroundTiles.png
+  artifactKey: Guid(718e9580ceabe4926a4707755bbcf446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/GroundTiles.png using Guid(718e9580ceabe4926a4707755bbcf446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '141e773695108d3ef3c960ade1eb2287') in 0.017894 seconds
+  Import took 0.020753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.016299 seconds.
+  path: Assets/Art/Rectangular Palette.prefab
+  artifactKey: Guid(ee3765f107f004a6a95740f57c374bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Rectangular Palette.prefab using Guid(ee3765f107f004a6a95740f57c374bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2d3f96774d7b48f2324a8fe16c3029d') in 0.376441 seconds
+  Import took 0.379258 seconds .
+
