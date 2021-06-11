@@ -2,7 +2,7 @@
 
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class RobbiePlayerMovement : MonoBehaviour
 {
 	public bool drawDebugRaycasts = true;	//Should the environment checks be visualized
 
