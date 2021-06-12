@@ -50,6 +50,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // game state dependent loops
         HandlingDeath();
         Loading();
     }
@@ -80,6 +81,7 @@ public class LevelManager : MonoBehaviour
         gameState = state;
     }
 
+    //other objects can call this method to register a player death
     public void HandlePlayerDeath()
     {
         SetGameState(GameState.DEATH);
@@ -93,23 +95,26 @@ public class LevelManager : MonoBehaviour
         // the rest should be handled in HandlingDeath() method called in update
     }
 
+    // this is a loop that allows for some "waiting" -- so players can see life decrease, etc
     private void HandlingDeath()
     {
         if (GetGameState() == GameState.DEATH)
         {
             if(!waiting)
             {
+                // player life count "ticks" down
                 if(waitingForDecrement)
                 {
                     playerLives -= 1;
                     playerLivesText.text = playerLives.ToString();
 
                     //wait 1 second
-
                     waitingForDecrement = false;
                     waitingToReturnToPlay = true;
                     StartCoroutine(Wait(1f));
                 }
+
+                // show new player life count before next screen
                 else if(waitingToReturnToPlay)
                 {
                     if (playerLives <= 0)
@@ -125,6 +130,8 @@ public class LevelManager : MonoBehaviour
                     waitingToReturnToPlay = false;
 
                 }
+
+                // game over screen will display
                 else if(waitingForGameOverScreen)
                 {
                     gameOverScreen.enabled = true;
@@ -133,6 +140,8 @@ public class LevelManager : MonoBehaviour
                     waitingForPlayerInput = true;
                     waitingForGameOverScreen = false;
                 }
+
+                // player input required to exit game over screen
                 else if(waitingForPlayerInput)
                 {
                     // player can press any button to return to start
@@ -150,6 +159,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    // this loop makes sure necessary references are set before letting playing back into play
     private void Loading()
     {
         if(GetGameState() == GameState.LOADING)
@@ -170,10 +180,12 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+
     private void ResetLevel()
     {
         SetGameState(GameState.LOADING);
 
+        // hard reset -- destroys old assets and reinstantiates them
         Destroy(GameObject.Find("Level " + currentLevel));
         Destroy(GameObject.Find("Level " + currentLevel + "(Clone)"));
         Instantiate(Resources.Load("Prefabs/Levels/Level " + currentLevel), Vector3.zero, Quaternion.identity);
@@ -186,9 +198,10 @@ public class LevelManager : MonoBehaviour
     {
         // wait two seconds
         waitingForGameOverScreen = true;
-        StartCoroutine(Wait(2f));
+        StartCoroutine(Wait(1f));
     }
 
+    // waits in realtime seconds
     IEnumerator Wait(float seconds)
     {
         waiting = true;
