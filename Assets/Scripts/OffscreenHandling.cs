@@ -16,13 +16,13 @@ public class OffscreenHandling : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "GoodPlayer")
         {
             Debug.Log("Player fell offscreen.");
-            Debug.Log("Player Lose condition triggered.");
-            // lose screen appears with option to retry
+            // lose screen appears
+            FindObjectOfType<LevelManager>().HandlePlayerDeath();
         }
 
         else if (collision.tag == "BadPlayer")
