@@ -1,34 +1,52 @@
 fileFormatVersion: 2
-guid: 718e9580ceabe4926a4707755bbcf446
+guid: 294ec1002087f46df93b54cce779e06e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8371019140385695755
-    second: GroundTiles_0
+      213: -5208934204145970208
+    second: GroundTilesAsperiteFile3_0
   - first:
-      213: 2925954814019165330
-    second: GroundTiles_1
+      213: 7689313374161230859
+    second: GroundTilesAsperiteFile3_1
   - first:
-      213: 4649709173367252304
-    second: GroundTiles_2
+      213: 3547309779531748891
+    second: GroundTilesAsperiteFile3_2
   - first:
-      213: -6272188282642272357
-    second: GroundTiles_3
+      213: 6454961261312587997
+    second: GroundTilesAsperiteFile3_3
   - first:
-      213: 6988028765074096110
-    second: GroundTiles_4
+      213: -7345804254645339177
+    second: GroundTilesAsperiteFile3_4
   - first:
-      213: 6983431751080370506
-    second: GroundTiles_5
+      213: -5689680346241165146
+    second: GroundTilesAsperiteFile3_5
   - first:
-      213: 4930281995492453304
-    second: GroundTiles_6
+      213: -3318540309724826754
+    second: GroundTilesAsperiteFile3_6
   - first:
-      213: 1230877979070368599
-    second: GroundTiles_7
+      213: 7695354306928245316
+    second: GroundTilesAsperiteFile3_7
   - first:
-      213: -6652277832207214932
-    second: GroundTiles_8
+      213: -1588116638157017288
+    second: GroundTilesAsperiteFile3_8
+  - first:
+      213: 8138600092386223762
+    second: GroundTilesAsperiteFile3_9
+  - first:
+      213: 2757800917811465686
+    second: GroundTilesAsperiteFile3_10
+  - first:
+      213: 6143020461524002816
+    second: GroundTilesAsperiteFile3_11
+  - first:
+      213: -6022486098115637304
+    second: GroundTilesAsperiteFile3_12
+  - first:
+      213: 8442056733614879981
+    second: GroundTilesAsperiteFile3_13
+  - first:
+      213: -7181668734366795092
+    second: GroundTilesAsperiteFile3_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,9 +111,9 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,9 +123,9 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,9 +135,9 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: iPhone
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,21 +147,9 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,7 +160,259 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GroundTiles_0
+      name: GroundTilesAsperiteFile3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e35f7f70f526b7b0800000000000000
+      internalID: -5208934204145970208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundTilesAsperiteFile3_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0c5a8926cde5ba60800000000000000
+      internalID: 7689313374161230859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundTilesAsperiteFile3_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16524533739a3130800000000000000
+      internalID: 3547309779531748891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundTilesAsperiteFile3_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8b17b3111a49950800000000000000
+      internalID: 6454961261312587997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundTilesAsperiteFile3_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbbf4c33f57e0a90800000000000000
+      internalID: -7345804254645339177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundTilesAsperiteFile3_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a816ccced13a01b0800000000000000
+      internalID: -5689680346241165146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundTilesAsperiteFile3_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e737902bb2d22f1d0800000000000000
+      internalID: -3318540309724826754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundTilesAsperiteFile3_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44afa3d68f36bca60800000000000000
+      internalID: 7695354306928245316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundTilesAsperiteFile3_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f63c0f450e5f9e0800000000000000
+      internalID: -1588116638157017288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundTilesAsperiteFile3_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29664a3f9ad12f070800000000000000
+      internalID: 8138600092386223762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundTilesAsperiteFile3_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd0663c25da54620800000000000000
+      internalID: 2757800917811465686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundTilesAsperiteFile3_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00828190094604550800000000000000
+      internalID: 6143020461524002816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GroundTilesAsperiteFile3_12
       rect:
         serializedVersion: 2
         x: 0
@@ -168,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b086fae7e85db2470800000000000000
-      internalID: 8371019140385695755
+      spriteID: 8cfc6116dc4db6ca0800000000000000
+      internalID: -6022486098115637304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GroundTiles_1
+      name: GroundTilesAsperiteFile3_13
       rect:
         serializedVersion: 2
         x: 16
@@ -189,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29cd476a6641b9820800000000000000
-      internalID: 2925954814019165330
+      spriteID: de43fcc0fd5382570800000000000000
+      internalID: 8442056733614879981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GroundTiles_2
+      name: GroundTilesAsperiteFile3_14
       rect:
         serializedVersion: 2
         x: 32
@@ -210,134 +468,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0552e63abd5178040800000000000000
-      internalID: 4649709173367252304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GroundTiles_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9f6db80df5b4f8a0800000000000000
-      internalID: -6272188282642272357
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GroundTiles_4
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eeff37e33277af060800000000000000
-      internalID: 6988028765074096110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GroundTiles_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4164548d222ae060800000000000000
-      internalID: 6983431751080370506
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GroundTiles_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bbe4d76a51eb6440800000000000000
-      internalID: 4930281995492453304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GroundTiles_7
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75b07502005f41110800000000000000
-      internalID: 1230877979070368599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GroundTiles_8
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca655109e8c5ea3a0800000000000000
-      internalID: -6652277832207214932
+      spriteID: caab9811656955c90800000000000000
+      internalID: -7181668734366795092
       vertices: []
       indices: 
       edges: []
