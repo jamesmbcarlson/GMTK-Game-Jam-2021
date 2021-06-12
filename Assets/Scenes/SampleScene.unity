@@ -167,10 +167,10 @@ MonoBehaviour:
   footOffset: 0.25
   eyeHeight: 1.5
   headClearance: 0.1
-  groundDistance: 0.5
+  groundDistance: 0.6
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
   isOnGround: 0
   isJumping: 0
   isHanging: 0
@@ -285,7 +285,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.875, y: 1}
+  m_Size: {x: 0.625, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &519420028
 GameObject:
@@ -414,10 +414,10 @@ MonoBehaviour:
   footOffset: 0.25
   eyeHeight: 1.5
   headClearance: 0.1
-  groundDistance: 0.5
+  groundDistance: 0.6
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
   isOnGround: 0
   isJumping: 0
   isHanging: 0
@@ -532,7 +532,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.875, y: 1}
+  m_Size: {x: 0.625, y: 1}
   m_EdgeRadius: 0
 --- !u!1001 &1029808591
 PrefabInstance:
@@ -591,7 +591,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2275550694647169957, guid: f9b8eb59a264745ff862571d85dfd1c1, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2716029960404566721, guid: f9b8eb59a264745ff862571d85dfd1c1, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7774805133074432548, guid: f9b8eb59a264745ff862571d85dfd1c1, type: 3}
       propertyPath: m_Size.x
