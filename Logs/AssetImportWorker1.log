@@ -1934,3 +1934,73 @@ System memory in use after: 90.5 MB.
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2539.
 Total: 16.020500 ms (FindLiveObjects: 2.485300 ms CreateObjectMapping: 0.721800 ms MarkObjects: 12.143500 ms  DeleteObjects: 0.661300 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 468.135994 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '819a33a9bd799f71faca6db75e8a216c') in 0.080603 seconds
+  Import took 0.129159 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.211710 seconds.
+  path: Assets/New Physic Material.physicMaterial
+  artifactKey: Guid(9b23b53d2cd173d4d8d012ef673b6757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/New Physic Material.physicMaterial using Guid(9b23b53d2cd173d4d8d012ef673b6757) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2761ad2a8badeb511d06f22e1c273cdf') in 0.416125 seconds
+  Import took 0.716212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.446272 seconds.
+  path: Assets/Slippery Physics Material.physicsMaterial2D
+  artifactKey: Guid(f2406451628640542acaaffb4dcbdcae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Slippery Physics Material.physicsMaterial2D using Guid(f2406451628640542acaaffb4dcbdcae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85c0e8816f166f4bb13209d08ea7bfe6') in 0.100557 seconds
+  Import took 0.132099 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009589 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.98 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.066 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.77 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1842 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.5 MB.
+System memory in use after: 90.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2543.
+Total: 5.946200 ms (FindLiveObjects: 0.531000 ms CreateObjectMapping: 0.234200 ms MarkObjects: 4.871300 ms  DeleteObjects: 0.305400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015140 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 3.26 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.495 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1842 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.5 MB.
+System memory in use after: 90.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2547.
+Total: 31.664200 ms (FindLiveObjects: 0.990800 ms CreateObjectMapping: 0.382800 ms MarkObjects: 29.448300 ms  DeleteObjects: 0.835200 ms)
+
