@@ -9,26 +9,31 @@ public class PlayerCollisionHandler : MonoBehaviour
 
     private bool level2EventTriggered = false;
 
+    private LevelManager levelManager;
+
     // Start is called before the first frame update
     void Start()
     {
         trapsLayer = LayerMask.NameToLayer("Traps");
         enemyLayer = LayerMask.NameToLayer("Enemy");
 
-    
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == trapsLayer)
+        if (levelManager.GetGameState() == LevelManager.GameState.PLAY)
         {
-            Debug.Log("You just ran into Traps!");
-            FindObjectOfType<LevelManager>().HandlePlayerDeath();
-        }
-        if(collision.gameObject.layer == enemyLayer)
-        {
-            Debug.Log("You just ran into Enemy!");
-            FindObjectOfType<LevelManager>().HandlePlayerDeath();
+            if (collision.gameObject.layer == trapsLayer)
+            {
+                Debug.Log("You just ran into Traps!");
+                FindObjectOfType<LevelManager>().HandlePlayerDeath();
+            }
+            if (collision.gameObject.layer == enemyLayer)
+            {
+                Debug.Log("You just ran into Enemy!");
+                FindObjectOfType<LevelManager>().HandlePlayerDeath();
+            }
         }
 
         if(collision.tag == "WeirdThing")
@@ -41,5 +46,6 @@ public class PlayerCollisionHandler : MonoBehaviour
 
             }
         }
+
     }
 }
