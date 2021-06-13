@@ -188,6 +188,7 @@ public class PlayerMovement : MonoBehaviour
             //...The player is no longer on the groud and is jumping...
             isOnGround = false;
             isJumping = true;
+            GetComponent<AudioSource>().Play();
 
             //...record the time the player will stop being able to boost their jump...
             jumpTime = Time.time + jumpHoldDuration;
