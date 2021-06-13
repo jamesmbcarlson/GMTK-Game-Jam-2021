@@ -57,7 +57,10 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D bodyCollider;
     private SpriteRenderer sprite;
     private Rigidbody2D rigidBody;
-    
+
+    // external game objects
+    private LevelManager levelManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +72,8 @@ public class PlayerMovement : MonoBehaviour
 
         // record player height from collider
         playerHeight = bodyCollider.size.y;
+
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     // Update is called once per frame
@@ -79,12 +84,14 @@ public class PlayerMovement : MonoBehaviour
 
         // TO-DO: return if game is not running
 
+        if (levelManager.GetGameState() == LevelManager.GameState.PLAY)
+        {
+            // get input from mouse, keyboard, and/or gamepad
+            ProcessInput();
 
-        // get input from mouse, keyboard, and/or gamepad
-        ProcessInput();
-
-        // clamp horizontal input between -1 and 1
-        horizontal = Mathf.Clamp(horizontal, -1f, 1f);
+            // clamp horizontal input between -1 and 1
+            horizontal = Mathf.Clamp(horizontal, -1f, 1f);
+        }
     }
 
     void FixedUpdate()
@@ -95,10 +102,12 @@ public class PlayerMovement : MonoBehaviour
         // check surroundings to determine status
         PhysicsCheck();
 
-        // handle movements
-        GroundMovement();
-        MidAirMovement();
-
+        if (levelManager.GetGameState() == LevelManager.GameState.PLAY)
+        {
+            // handle movements
+            GroundMovement();
+            MidAirMovement();
+        }
     }
 
     private void ClearInput()
@@ -220,6 +229,11 @@ public class PlayerMovement : MonoBehaviour
         {
             sprite.sprite = spriteFacingRight;
         }
+    }
+
+    public void Freeze()
+    {
+        rigidBody.constraints = RigidbodyConstraints2D.FreezePosition;
     }
 
     //These two Raycast methods wrap the Physics2D.Raycast() and provide some extra

@@ -21,10 +21,12 @@ public class PlayerCollisionHandler : MonoBehaviour
         if(collision.gameObject.layer == trapsLayer)
         {
             Debug.Log("You just ran into Traps!");
+            FindObjectOfType<LevelManager>().HandlePlayerDeath();
         }
         if(collision.gameObject.layer == enemyLayer)
         {
             Debug.Log("You just ran into Enemy!");
+            FindObjectOfType<LevelManager>().HandlePlayerDeath();
         }
     }
 }

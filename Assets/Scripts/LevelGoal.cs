@@ -20,8 +20,10 @@ public class LevelGoal : MonoBehaviour
     {
         if (collision.tag == "GoodPlayer")
         {
-            Debug.Log("Player Win condition triggered. CONGRATS!!");
-            // win screen or just cut to next level
+            //Debug.Log("Player Win condition triggered. CONGRATS!!");
+            collision.GetComponent<PlayerMovement>().Freeze();
+            FindObjectOfType<LevelManager>().PlayerBeatLevel();
+            
         }
     }
 }

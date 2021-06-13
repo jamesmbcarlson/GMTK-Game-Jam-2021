@@ -24,6 +24,7 @@ public class LevelManager : MonoBehaviour
     [Header("UI Handling")]
     public Canvas loseScreen;
     public Canvas gameOverScreen;
+    public Canvas interludeScreen;
     public Text playerLivesText;
 
     private bool waiting = false;
@@ -33,18 +34,28 @@ public class LevelManager : MonoBehaviour
     private bool waitingForPlayerInput = false;
     private bool waitingForLevelToLoad = false;
 
+    private bool levelBeaten = false;
+
     private CameraFollow cameraFollower;
 
     // Start is called before the first frame update
     void Start()
     {
         playerLivesText.text = playerLives.ToString();
-        loseScreen.enabled = false;
-        gameOverScreen.enabled = false;
+        loseScreen.enabled = gameOverScreen.enabled = interludeScreen.enabled = false;
 
         cameraFollower = FindObjectOfType<CameraFollow>();
 
-        SetGameState(GameState.LOADING);
+        SetGameState(GameState.PLAY);
+
+        //for testin' stuff
+        if(startingLevel != 1)
+        {
+            SetGameState(GameState.LOADING);
+            Destroy(GameObject.Find("Level " + currentLevel));
+            currentLevel = startingLevel - 1;
+            NextLevel(true);
+        }
     }
 
     // Update is called once per frame
@@ -53,15 +64,6 @@ public class LevelManager : MonoBehaviour
         // game state dependent loops
         HandlingDeath();
         Loading();
-    }
-
-    private void SpawnNextLevel()
-    {
-        SetGameState(GameState.LOADING);
-        // fade out? or maybe a swipe to next level
-        // create next level, destroy last level
-
-        // 
     }
 
     public void PauseGame()
@@ -124,7 +126,7 @@ public class LevelManager : MonoBehaviour
                     else
                     {
                         // return to gameplay on same stage
-                        ResetLevel();
+                        NextLevel(false);
                     }
 
                     waitingToReturnToPlay = false;
@@ -152,48 +154,81 @@ public class LevelManager : MonoBehaviour
                         currentLevel = startingLevel;
                         playerLives = 3;
                         playerLivesText.text = playerLives.ToString();
-                        ResetLevel(); //temp, should return to start menu
+                        NextLevel(false); //temp, should return to start menu
                     }
                 }
             }
         }
     }
 
+    // call when player has beaten level
+    public void PlayerBeatLevel()
+    {
+        if (!levelBeaten)
+        {
+            levelBeaten = true;
+        }
+
+        // wait for 1 second
+        StartCoroutine(Wait(1f));
+
+        SetGameState(GameState.LOADING);
+    }
+
+    // destroys current level, sets up another
+    private void NextLevel(bool nextLevel) // true -> next level // false -> reset current level
+    {
+        SetGameState(GameState.LOADING);
+
+        // destroys old assets
+        Destroy(GameObject.Find("Level " + currentLevel));
+        Destroy(GameObject.Find("Level " + currentLevel + "(Clone)"));
+
+        if(nextLevel)
+        {
+            currentLevel += 1;
+        }
+
+        // instantiates or reinstantiates desired level
+        Instantiate(Resources.Load("Prefabs/Levels/Level " + currentLevel), Vector3.zero, Quaternion.identity);
+
+        levelBeaten = false;
+        waitingForLevelToLoad = true;
+        StartCoroutine(Wait(1f));
+    }
+
     // this loop makes sure necessary references are set before letting playing back into play
     private void Loading()
     {
-        if(GetGameState() == GameState.LOADING)
+        if (GetGameState() == GameState.LOADING)
         {
-            if (!waiting && waitingForLevelToLoad)
+            if (!waiting)
             {
-                if (!cameraFollower.ReferencesAreSet())
+                if(levelBeaten)
                 {
-                    cameraFollower.SetCameraObjects();
+                    NextLevel(true);
+                    interludeScreen.enabled = true;
                 }
-                else
+                else if(waitingForLevelToLoad)
                 {
-                    loseScreen.enabled = false;
-                    SetGameState(GameState.PLAY);
-                    waitingForLevelToLoad = false;
+                    if (!cameraFollower.ReferencesAreSet())
+                    {
+                        cameraFollower.SetCameraObjects();
+                    }
+                    else
+                    {
+                        loseScreen.enabled = false;
+                        interludeScreen.enabled = false;
+                        SetGameState(GameState.PLAY);
+                        
+                        waitingForLevelToLoad = false;
+                    }
                 }
             }
         }
     }
 
-
-    private void ResetLevel()
-    {
-        SetGameState(GameState.LOADING);
-
-        // hard reset -- destroys old assets and reinstantiates them
-        Destroy(GameObject.Find("Level " + currentLevel));
-        Destroy(GameObject.Find("Level " + currentLevel + "(Clone)"));
-        Instantiate(Resources.Load("Prefabs/Levels/Level " + currentLevel), Vector3.zero, Quaternion.identity);
-
-        waitingForLevelToLoad = true;
-        StartCoroutine(Wait(1f));
-    }
-
+    // Player is out of lives, must start from beginning
     private void CallGameOver()
     {
         // wait two seconds
