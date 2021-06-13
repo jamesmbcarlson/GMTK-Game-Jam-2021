@@ -174,7 +174,7 @@ public class LevelManager : MonoBehaviour
         }
 
         // wait for 1 second
-        StartCoroutine(Wait(1f));
+        StartCoroutine(Wait(2f));
 
         SetGameState(GameState.LOADING);
     }
