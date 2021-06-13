@@ -23,6 +23,7 @@ public class LevelGoal : MonoBehaviour
             //Debug.Log("Player Win condition triggered. CONGRATS!!");
             collision.GetComponent<PlayerMovement>().Freeze();
             FindObjectOfType<LevelManager>().PlayerBeatLevel();
+            GetComponent<AudioSource>().Play();
             
         }
     }
