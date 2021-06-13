@@ -288,10 +288,12 @@ public class LevelManager : MonoBehaviour
                         //GameObject.Find("PlayerGood").GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                         GameObject.Find("PlayerGood").GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                         GameObject.Find("PlayerGood").transform.position = new Vector2(16.5f,-1.5f);
+                        GameObject.Find("PlayerGood").GetComponent<PlayerMovement>().ReverseCharDirection();
 
                         // spawn doppelganger at left side of platform
-                        Instantiate(Resources.Load("Prefabs/PlayerBad"), new Vector2(12.5f, -1.5f),
+                        GameObject enemy = (GameObject)Instantiate(Resources.Load("Prefabs/PlayerBad"), new Vector2(12.5f, -1.5f),
                             Quaternion.identity, GameObject.Find("Level 2(Clone)").transform);
+                        enemy.GetComponent<PlayerMovement>().ReverseCharDirection();
 
                     }
                 }

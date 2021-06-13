@@ -231,6 +231,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    // allows other scripts to flip orientation... I need this for one part lol
+    public void ReverseCharDirection()
+    {
+        if(sprite.sprite == spriteFacingLeft)
+        {
+            sprite.sprite = spriteFacingRight;
+        }
+        else
+        {
+            sprite.sprite = spriteFacingLeft;
+        }
+    }
+
     public void Freeze()
     {
         rigidBody.constraints = RigidbodyConstraints2D.FreezePosition;
