@@ -188,7 +188,11 @@ public class PlayerMovement : MonoBehaviour
             //...The player is no longer on the groud and is jumping...
             isOnGround = false;
             isJumping = true;
-            GetComponent<AudioSource>().Play();
+
+            if (!isEvil)
+            {
+                GetComponent<AudioSource>().Play();
+            }
 
             //...record the time the player will stop being able to boost their jump...
             jumpTime = Time.time + jumpHoldDuration;
@@ -235,7 +239,10 @@ public class PlayerMovement : MonoBehaviour
     // allows other scripts to flip orientation... I need this for one part lol
     public void ReverseCharDirection()
     {
-        if(sprite.sprite == spriteFacingLeft)
+        //Turn the character by flipping the direction
+        direction *= -1;
+
+        if (sprite.sprite == spriteFacingLeft)
         {
             sprite.sprite = spriteFacingRight;
         }

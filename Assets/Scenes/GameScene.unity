@@ -1152,7 +1152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLevel: 1
   startingLevel: 1
-  lastLevel: 3
+  lastLevel: 5
   playerLives: 3
   loseScreen: {fileID: 153138260}
   gameOverScreen: {fileID: 1120346418}
@@ -1354,6 +1354,38 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1023080942}
+    - target: {fileID: 4665760296689368490, guid: 112336a7079eee54fb7294a5472de232, type: 3}
+      propertyPath: jumpForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665760296689368490, guid: 112336a7079eee54fb7294a5472de232, type: 3}
+      propertyPath: jumpHoldForce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665760297538307137, guid: 112336a7079eee54fb7294a5472de232, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[17].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665760297538307137, guid: 112336a7079eee54fb7294a5472de232, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[11].m_RefCount
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665760297538307137, guid: 112336a7079eee54fb7294a5472de232, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[15].m_RefCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665760297538307137, guid: 112336a7079eee54fb7294a5472de232, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[17].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665760297538307137, guid: 112336a7079eee54fb7294a5472de232, type: 3}
+      propertyPath: m_Tiles.Array.data[23].second.m_TileSpriteIndex
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665760297538307137, guid: 112336a7079eee54fb7294a5472de232, type: 3}
+      propertyPath: m_Tiles.Array.data[70].second.m_TileSpriteIndex
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5608651895716826850, guid: 112336a7079eee54fb7294a5472de232, type: 3}
       propertyPath: m_Name
       value: Level 1

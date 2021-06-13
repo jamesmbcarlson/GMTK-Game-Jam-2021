@@ -36,6 +36,7 @@ public class LevelManager : MonoBehaviour
     private bool waitingForGameOverScreen = false;
     private bool waitingForPlayerInput = false;
     private bool waitingForLevelToLoad = false;
+    private bool waitToStartLevel = false;
 
     private bool levelBeaten = false;
 
@@ -240,10 +241,16 @@ public class LevelManager : MonoBehaviour
                     {
                         loseScreen.enabled = false;
                         interludeScreen.enabled = false;
-                        SetGameState(GameState.PLAY);
                         
+                        StartCoroutine(Wait(0.5f));
+                        waitToStartLevel = true;
                         waitingForLevelToLoad = false;
                     }
+                }
+                else if(waitToStartLevel)
+                {
+                    SetGameState(GameState.PLAY);
+                    waitToStartLevel = false;
                 }
             }
         }
@@ -292,9 +299,9 @@ public class LevelManager : MonoBehaviour
                         GameObject.Find("PlayerGood").GetComponent<PlayerMovement>().ReverseCharDirection();
 
                         // spawn doppelganger at left side of platform
-                        GameObject enemy = (GameObject)Instantiate(Resources.Load("Prefabs/PlayerBad"), new Vector2(12.5f, -1.5f),
+                        Instantiate(Resources.Load("Prefabs/PlayerBad"), new Vector2(12.5f, -1.5f),
                             Quaternion.identity, GameObject.Find("Level 2(Clone)").transform);
-                        enemy.GetComponent<PlayerMovement>().ReverseCharDirection();
+                        
 
                     }
                 }
@@ -311,6 +318,7 @@ public class LevelManager : MonoBehaviour
                     }
                     else
                     {
+                        GameObject.Find("PlayerBad(Clone)").GetComponent<PlayerMovement>().ReverseCharDirection();
                         StartCoroutine(Wait(0.5f));
                         eventNumber = 2;
                     }
