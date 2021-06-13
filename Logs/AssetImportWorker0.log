@@ -994,3 +994,114 @@ System memory in use after: 91.7 MB.
 Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2409.
 Total: 8.462300 ms (FindLiveObjects: 0.691500 ms CreateObjectMapping: 0.340700 ms MarkObjects: 6.991400 ms  DeleteObjects: 0.431900 ms)
 
+========================================================================
+Received Import Request.
+  Time since last request: 1536.004044 seconds.
+  path: Assets/Resources/Prefabs/Levels/Level 3.prefab
+  artifactKey: Guid(adb37a87dc9b84b49b7e126845f59f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Levels/Level 3.prefab using Guid(adb37a87dc9b84b49b7e126845f59f65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8390211e62d4833f8a0b06d8c253d69f') in 0.337027 seconds
+  Import took 0.420919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.841178 seconds.
+  path: Assets/Art/Level Objects/Quick_Spike.png
+  artifactKey: Guid(fddb183cf6b6e467098e43da23d38cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Level Objects/Quick_Spike.png using Guid(fddb183cf6b6e467098e43da23d38cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '165eaf1b35bc359a1d24eab6e6534a71') in 0.256793 seconds
+  Import took 0.277836 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000931 seconds.
+  path: Assets/Art/Level Objects/Weird-SciFi-Thing-Sheet.png
+  artifactKey: Guid(978ea04385cb0b24f9e19034c67c546c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Level Objects/Weird-SciFi-Thing-Sheet.png using Guid(978ea04385cb0b24f9e19034c67c546c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a4ce3e93d4d1465def32d3f539c3423') in 0.099068 seconds
+  Import took 0.123647 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 60.606321 seconds.
+  path: Assets/Art/Level Objects/Weird-SciFi-Thing-Sheet.png
+  artifactKey: Guid(978ea04385cb0b24f9e19034c67c546c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Level Objects/Weird-SciFi-Thing-Sheet.png using Guid(978ea04385cb0b24f9e19034c67c546c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ca711a04913a603f6ada8d76edf0774') in 0.082009 seconds
+  Import took 0.101804 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.725633 seconds.
+  path: Assets/Art/Level Objects/Weird-SciFi-Thing-Sheet.png
+  artifactKey: Guid(978ea04385cb0b24f9e19034c67c546c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Level Objects/Weird-SciFi-Thing-Sheet.png using Guid(978ea04385cb0b24f9e19034c67c546c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33bb2f96011a4928a44c544eb8ca66d8') in 0.127217 seconds
+  Import took 0.143954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 157.272650 seconds.
+  path: Assets/Art/Level Objects/Weird SciFI Thing.anim
+  artifactKey: Guid(0f677805bee05d94e86d08d6b36a0940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Level Objects/Weird SciFI Thing.anim using Guid(0f677805bee05d94e86d08d6b36a0940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90947aa556d56d0df9464bb6bdc37e9e') in 0.101770 seconds
+  Import took 0.131355 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003991 seconds.
+  path: Assets/Art/Level Objects/Weird SciFI Thing.anim
+  artifactKey: Guid(0f677805bee05d94e86d08d6b36a0940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Level Objects/Weird SciFI Thing.anim using Guid(0f677805bee05d94e86d08d6b36a0940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90947aa556d56d0df9464bb6bdc37e9e') in 0.017188 seconds
+  Import took 0.032506 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 143.936402 seconds.
+  path: Assets/Art/Level Objects/New Animator Controller.controller
+  artifactKey: Guid(9972be584d6fdec4e840739076012347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Level Objects/New Animator Controller.controller using Guid(9972be584d6fdec4e840739076012347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afa7b81c1ee8966b63762f51c5c912e3') in 0.064242 seconds
+  Import took 0.082598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016189 seconds.
+  path: Assets/Art/Level Objects/New Animator Controller.controller
+  artifactKey: Guid(9972be584d6fdec4e840739076012347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Level Objects/New Animator Controller.controller using Guid(9972be584d6fdec4e840739076012347) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afa7b81c1ee8966b63762f51c5c912e3') in 0.019471 seconds
+  Import took 0.032691 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.461836 seconds.
+  path: Assets/Art/Level Objects/Weird SciFI Thing.anim
+  artifactKey: Guid(0f677805bee05d94e86d08d6b36a0940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Level Objects/Weird SciFI Thing.anim using Guid(0f677805bee05d94e86d08d6b36a0940) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e5a5496b47e50d1ad057764da3431b0') in 0.023540 seconds
+  Import took 0.039999 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 315.102526 seconds.
+  path: Assets/Art/Level Objects/Weird SciFi.anim
+  artifactKey: Guid(1926e2003c693a943b310ff4e2b4a655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Level Objects/Weird SciFi.anim using Guid(1926e2003c693a943b310ff4e2b4a655) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3eb8c3dd1209e86af8a1d0a786aa630') in 0.051632 seconds
+  Import took 0.074146 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007163 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.201 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.61 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1846 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 91.7 MB.
+System memory in use after: 91.7 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2416.
+Total: 13.359100 ms (FindLiveObjects: 1.939100 ms CreateObjectMapping: 0.604800 ms MarkObjects: 10.329800 ms  DeleteObjects: 0.478800 ms)
+
