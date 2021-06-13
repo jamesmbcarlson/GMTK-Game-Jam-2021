@@ -97,6 +97,7 @@ public class LevelManager : MonoBehaviour
     public void HandlePlayerDeath()
     {
         SetGameState(GameState.DEATH);
+        GetComponent<AudioSource>().Play();
 
         loseScreen.enabled = true;
 
@@ -120,10 +121,10 @@ public class LevelManager : MonoBehaviour
                     playerLives -= 1;
                     playerLivesText.text = playerLives.ToString();
 
-                    //wait 1 second
+                    //wait 2 second
                     waitingForDecrement = false;
                     waitingToReturnToPlay = true;
-                    StartCoroutine(Wait(1f));
+                    StartCoroutine(Wait(2.5f));
                 }
 
                 // show new player life count before next screen
