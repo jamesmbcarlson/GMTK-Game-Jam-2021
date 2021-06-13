@@ -22,6 +22,13 @@ public class LevelGoal : MonoBehaviour
         {
             //Debug.Log("Player Win condition triggered. CONGRATS!!");
             collision.GetComponent<PlayerMovement>().Freeze();
+
+            GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("BadPlayer");
+            foreach (GameObject obj in playerObjects)
+            {
+                obj.GetComponent<PlayerMovement>().Freeze();
+            }
+
             FindObjectOfType<LevelManager>().PlayerBeatLevel();
             GetComponent<AudioSource>().Play();
             

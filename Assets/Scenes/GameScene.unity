@@ -1009,6 +1009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentLevel: 1
   startingLevel: 1
+  lastLevel: 3
   playerLives: 3
   loseScreen: {fileID: 153138260}
   gameOverScreen: {fileID: 1120346418}

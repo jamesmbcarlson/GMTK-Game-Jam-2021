@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class LevelManager : MonoBehaviour
 
     public int currentLevel;
     public int startingLevel;   // this is for testing; final product should always start player on level 1
+    public int lastLevel;       // final stage of gameplay
 
     public int playerLives;
 
@@ -49,7 +51,7 @@ public class LevelManager : MonoBehaviour
 
         cameraFollower = FindObjectOfType<CameraFollow>();
 
-        SetGameState(GameState.PLAY);
+        
 
         //for testin' stuff
         if(startingLevel != 1)
@@ -58,6 +60,10 @@ public class LevelManager : MonoBehaviour
             Destroy(GameObject.Find("Level " + currentLevel));
             currentLevel = startingLevel - 1;
             NextLevel(true);
+        }
+        else
+        {
+            SetGameState(GameState.PLAY);
         }
     }
 
@@ -153,12 +159,14 @@ public class LevelManager : MonoBehaviour
                     // player can press any button to return to start
                     if (Input.anyKeyDown) //temp
                     {
-                        waitingForPlayerInput = false;
-                        gameOverScreen.enabled = false;
-                        currentLevel = startingLevel;
-                        playerLives = 3;
-                        playerLivesText.text = playerLives.ToString();
-                        NextLevel(false); //temp, should return to start menu
+                        //waitingForPlayerInput = false;
+                        //gameOverScreen.enabled = false;
+                        //currentLevel = startingLevel;
+                        //playerLives = 3;
+                        //playerLivesText.text = playerLives.ToString();
+                        //NextLevel(false); //temp, should return to start menu
+
+                        SceneManager.LoadScene("StartMenu");
                     }
                 }
             }
@@ -193,8 +201,16 @@ public class LevelManager : MonoBehaviour
             currentLevel += 1;
         }
 
+        if(currentLevel > lastLevel)
+        {
+            SceneManager.LoadScene("GameCompleteScene");
+            return;
+        }
+
         // instantiates or reinstantiates desired level
         Instantiate(Resources.Load("Prefabs/Levels/Level " + currentLevel), Vector3.zero, Quaternion.identity);
+        
+        
 
         levelBeaten = false;
         waitingForLevelToLoad = true;
