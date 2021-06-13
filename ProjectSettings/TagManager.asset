@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GoodPlayer
   - BadPlayer
+  - WeirdThing
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,9 @@ public class PlayerCollisionHandler : MonoBehaviour
 {
     int trapsLayer;
     int enemyLayer;
-    
+
+    private bool level2EventTriggered = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,17 @@ public class PlayerCollisionHandler : MonoBehaviour
         {
             Debug.Log("You just ran into Enemy!");
             FindObjectOfType<LevelManager>().HandlePlayerDeath();
+        }
+
+        if(collision.tag == "WeirdThing")
+        {
+            Debug.Log("Weird Thing collision detected");
+            if(!level2EventTriggered)
+            {
+                FindObjectOfType<LevelManager>().TriggerEvent(0);
+                level2EventTriggered = true;
+
+            }
         }
     }
 }

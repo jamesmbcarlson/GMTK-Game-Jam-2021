@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
         PLAY,
         DEATH,
         LOADING,
+        CINEMATIC,
         PAUSE
     }
 
@@ -35,6 +36,8 @@ public class LevelManager : MonoBehaviour
     private bool waitingForLevelToLoad = false;
 
     private bool levelBeaten = false;
+
+    private int eventNumber;
 
     private CameraFollow cameraFollower;
 
@@ -64,6 +67,7 @@ public class LevelManager : MonoBehaviour
         // game state dependent loops
         HandlingDeath();
         Loading();
+        HandleCinematic();
     }
 
     public void PauseGame()
@@ -223,6 +227,78 @@ public class LevelManager : MonoBehaviour
                         
                         waitingForLevelToLoad = false;
                     }
+                }
+            }
+        }
+    }
+
+    public void TriggerEvent(int id)
+    {
+        SetGameState(GameState.CINEMATIC);
+        StartCoroutine(Wait(0.25f));
+
+        GameObject.Find("PlayerGood").GetComponent<PlayerMovement>().Freeze();
+
+        eventNumber = id;
+    }
+
+    private void HandleCinematic()
+    {
+        if(GetGameState() == GameState.CINEMATIC)
+        {
+            if(!waiting)
+            {
+                if(eventNumber == 0)
+                {
+                    // FLASH RED
+                    if(GameObject.Find("RedFlashImage").GetComponent<Image>().color.a < 1)
+                    {
+                        GameObject.Find("RedFlashImage").GetComponent<Image>().color =
+                            new Color(GameObject.Find("RedFlashImage").GetComponent<Image>().color.r,
+                            GameObject.Find("RedFlashImage").GetComponent<Image>().color.g,
+                            GameObject.Find("RedFlashImage").GetComponent<Image>().color.b,
+                            GameObject.Find("RedFlashImage").GetComponent<Image>().color.a + 0.1f);
+                    }
+                    else
+                    {
+                        StartCoroutine(Wait(0.5f));
+
+                        eventNumber = 1;
+
+                        //destroy that weird thing
+                        Destroy(GameObject.Find("Weird SciFi Thing"));
+
+                        //move player to right side of platform
+                        //GameObject.Find("PlayerGood").GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                        GameObject.Find("PlayerGood").GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                        GameObject.Find("PlayerGood").transform.position = new Vector2(16.5f,-1.5f);
+
+                        // spawn doppelganger at left side of platform
+                        Instantiate(Resources.Load("Prefabs/PlayerBad"), new Vector2(12.5f, -1.5f),
+                            Quaternion.identity, GameObject.Find("Level 2(Clone)").transform);
+
+                    }
+                }
+                else if(eventNumber == 1)
+                {
+                    // DISPERSE RED
+                    if (GameObject.Find("RedFlashImage").GetComponent<Image>().color.a > 0)
+                    {
+                        GameObject.Find("RedFlashImage").GetComponent<Image>().color =
+                            new Color(GameObject.Find("RedFlashImage").GetComponent<Image>().color.r,
+                            GameObject.Find("RedFlashImage").GetComponent<Image>().color.g,
+                            GameObject.Find("RedFlashImage").GetComponent<Image>().color.b,
+                            GameObject.Find("RedFlashImage").GetComponent<Image>().color.a - 0.01f);
+                    }
+                    else
+                    {
+                        StartCoroutine(Wait(0.5f));
+                        eventNumber = 2;
+                    }
+                }
+                else if(eventNumber == 2)
+                {
+                    SetGameState(GameState.PLAY);
                 }
             }
         }
